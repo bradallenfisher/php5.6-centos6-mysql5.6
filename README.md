@@ -1,4 +1,5 @@
-There is also a vagrant box available:
+There is also a fully provisioned vagrant box available:
+vagrant init bradallenfisher/centos-6.7-x86_64-php-5.6; vagrant up --provider virtualbox
 
 It contains:
 - php 5.6
