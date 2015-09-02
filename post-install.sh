@@ -1,7 +1,7 @@
 #!/bin/bash
 
 composer global require drush/drush:7.*
-export PATH="$HOME/.composer/vendor/bin:$PATH"
+echo 'export PATH="$HOME/.composer/vendor/bin:$PATH"' >> $HOME/.bashrc
 
 # install drush recipes
 drush dl drush_recipes -y
