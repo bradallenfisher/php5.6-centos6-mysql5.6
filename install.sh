@@ -33,8 +33,4 @@ chkconfig varnish on
 service httpd start
 chkconfig httpd on
 
-#get drush
-curl -sS https://getcomposer.org/installer | php
-mv composer.phar /usr/local/bin/composer
-
 echo "ON TO STEP 2...."
