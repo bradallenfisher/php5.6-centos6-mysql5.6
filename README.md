@@ -30,4 +30,5 @@ git clone https://github.com/bradallenfisher/php5.6-centos6-mysql5.6.git;cd php5
 ```
 
 add below string to /etc/hosts file
+
 192.168.5.6 local.php56.dev
