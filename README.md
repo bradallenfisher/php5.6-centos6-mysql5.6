@@ -1,3 +1,5 @@
+Download the fully provisioned vagrant box here: 
+
 # php5.6-centos6-mysql5.6
 install php 5.6 and mysql 5.6 on RHEL 6 VM (like digitalocean or linode)
 
@@ -15,3 +17,4 @@ One liner to install php 5.6 and mysql 5.6 in vagrant (local machine)
 ```bash
 https://github.com/bradallenfisher/php5.6-centos6-mysql5.6.git;cd php5.6-centos6-mysql5.6; vagrant up
 ```
+
