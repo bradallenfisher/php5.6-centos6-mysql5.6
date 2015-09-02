@@ -14,8 +14,8 @@ wget http://dev.mysql.com/get/mysql-community-release-el6-5.noarch.rpm
 yum localinstall mysql-community-release-el6-5.noarch.rpm -y
 yum update -y
 yum install mysql-community-server -y
-systemctl enable mysqld.service
-/bin/systemctl start  mysqld.service
+service mysqld start
+chkconfig mysqld on
 
 # install some dev tools
 yum groupinstall 'Development tools' -y
@@ -29,7 +29,9 @@ sed -i 's/VARNISH_LISTEN_PORT=6081/VARNISH_LISTEN_PORT=80/g' /etc/sysconfig/varn
 sed -i 's/Listen 80/Listen 8080/g' /etc/httpd/conf/httpd.conf
 
 service varnish start
+chkconfig varnish on
 service httpd start
+chkconfig httpd on
 
 #get drush
 curl -sS https://getcomposer.org/installer | php
