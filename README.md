@@ -1,4 +1,4 @@
-There is also a fully provisioned vagrant box available:
+Here is a fully provisioned vagrant box available:
 
 ```bash
 vagrant init bradallenfisher/centos-6.7-x86_64-php-5.6; vagrant up --provider virtualbox
@@ -9,7 +9,6 @@ It contains:
 - mysql 5.6
 - drush 7 via composer available to all users on the system.
 - a drupal site at /var/www/html
-
 
 
 # php5.6-centos6-mysql5.6
