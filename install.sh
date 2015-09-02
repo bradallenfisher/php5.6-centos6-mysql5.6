@@ -25,11 +25,11 @@ yum install --enablerepo=webtatic-testing php56w php56w-opcache php56w-cli php56
 # get varnish duh!
 rpm --nosignature -i https://repo.varnish-cache.org/redhat/varnish-4.0.el6.rpm
 yum install varnish -y
-sed -i 's/VARNISH_LISTEN_PORT=6081/VARNISH_LISTEN_PORT=80/g' /etc/varnish/varnish.params
+sed -i 's/VARNISH_LISTEN_PORT=6081/VARNISH_LISTEN_PORT=80/g' /etc/sysconfig/varnish
 sed -i 's/Listen 80/Listen 8080/g' /etc/httpd/conf/httpd.conf
 
-service start varnish
-service start httpd
+service varnish start
+service httpd start
 
 #get drush
 curl -sS https://getcomposer.org/installer | php
