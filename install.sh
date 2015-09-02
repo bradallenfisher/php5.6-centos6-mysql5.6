@@ -35,6 +35,7 @@ chkconfig httpd on
 
 curl -sS https://getcomposer.org/installer | php
 sudo mv composer.phar /usr/local/bin/composer
+ln -s /usr/local/bin/composer /usr/bin/composer
 composer global require drush/drush:7.*
 
 echo "ON TO STEP 2...."
