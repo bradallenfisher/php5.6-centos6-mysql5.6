@@ -38,4 +38,19 @@ sudo mv composer.phar /usr/local/bin/composer
 ln -s /usr/local/bin/composer /usr/bin/composer
 composer global require drush/drush:7.*
 
+#make sure you can index with php and use clean urls in drupal
+touch /etc/httpd/conf.d/html.conf
+
+cat << EOF > /etc/httpd/conf.d/html.conf
+
+<Directory "/var/www/html">
+  Options Indexes FollowSymLinks
+  AllowOverride All
+  Require all granted
+</Directory>
+<IfModule dir_module>
+    DirectoryIndex index.php index.html
+</IfModule>
+EOF
+
 echo "ON TO STEP 2...."
