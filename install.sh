@@ -10,8 +10,8 @@ wget http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
 rpm -Uvh epel-release-6*.rpm
 
 # get latest mysql
-wget http://dev.mysql.com/get/mysql-community-release-el7-5.noarch.rpm
-yum localinstall mysql-community-release-el7-5.noarch.rpm -y
+wget http://dev.mysql.com/get/mysql-community-release-el6-5.noarch.rpm
+yum localinstall mysql-community-release-el6-5.noarch.rpm -y
 yum update -y
 yum install mysql-community-server -y
 systemctl enable mysqld.service
