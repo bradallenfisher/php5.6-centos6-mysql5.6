@@ -20,7 +20,7 @@ chkconfig mysqld on
 # install some dev tools
 yum groupinstall 'Development tools' -y
 
-yum install -y --enablerepo=webtatic-testing php56w php56w-opcache php56w-cli php56w-common php56w-gd php56w-mbstring php56w-pecl-apcu php56w-mcrypt php56w-pdo php56w-xml php56w-mysqlnd
+yum install -y --enablerepo=webtatic-testing php56w php56w-opcache php56w-cli php56w-common php56w-gd php56w-mbstring php56w-mcrypt php56w-pdo php56w-xml php56w-mysqlnd
 
 # get varnish duh!
 rpm --nosignature -i https://repo.varnish-cache.org/redhat/varnish-4.0.el6.rpm
