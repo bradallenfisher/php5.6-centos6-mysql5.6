@@ -1,4 +1,4 @@
-Here is a fully provisioned vagrant box available:
+Here is the fully provisioned vagrant box:
 
 ```bash
 vagrant init bradallenfisher/centos-6.7-x86_64-php-5.6; vagrant up --provider virtualbox
