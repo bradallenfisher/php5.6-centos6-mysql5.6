@@ -7,7 +7,8 @@ git clone https://github.com/bradallenfisher/php5.6-centos6-mysql5.6.git; cd php
 ##optional
 
 - add a user other than root
-- then run the post-install.sh script
+- mv the post-install.sh script to that user's home directory
+- run the post-install.sh script as the new user
 
 One liner to install php 5.6 and mysql 5.6 in vagrant (local machine)
 
