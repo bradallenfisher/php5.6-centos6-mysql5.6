@@ -26,6 +26,6 @@ git clone https://github.com/bradallenfisher/php5.6-centos6-mysql5.6.git; cd php
 One liner to install php 5.6 and mysql 5.6 in vagrant (local machine)
 
 ```bash
-https://github.com/bradallenfisher/php5.6-centos6-mysql5.6.git;cd php5.6-centos6-mysql5.6; vagrant up
+git clone https://github.com/bradallenfisher/php5.6-centos6-mysql5.6.git;cd php5.6-centos6-mysql5.6; vagrant up
 ```
 
