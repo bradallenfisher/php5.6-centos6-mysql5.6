@@ -7,6 +7,8 @@ vagrant init bradallenfisher/centos-6.7-x86_64-php-5.6; vagrant up --provider vi
 It contains:
 - php 5.6
 - mysql 5.6
+- varnish 4.0
+  - needs vcl added
 - drush 7 via composer available to all users on the system.
 - a drupal site at /var/www/html
 
