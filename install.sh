@@ -47,10 +47,16 @@ cat << EOF > /etc/httpd/conf.d/domains.conf
 NameVirtualHost *:8080
 
 <VirtualHost *:8080>
-DocumentRoot /var/www/html
-ServerName local.php56.dev
-Include /var/www/html/.htaccess
+  DocumentRoot /var/www/html
+  ServerName local.php56.dev
 </VirtualHost>
+
+<Directory /var/www/html/nittany>
+  AllowOverride None
+  Order allow,deny
+  allow from all
+  Include /var/www/html/nittany/.htaccess
+</Directory>
 EOF
 
 service httpd restart
