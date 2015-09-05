@@ -41,7 +41,7 @@ composer global require drush/drush:7.*
 #make sure you can index with php and use clean urls in drupal
 touch /etc/httpd/conf.d/html.conf
 
-cat << EOF > /etc/httpd/conf.d/html.conf
+cat << EOF > /etc/httpd/conf.d/domains.conf
 
 NameVirtualHost *:8080
 
@@ -53,5 +53,5 @@ ServerName local.php56.dev
 
 </VirtualHost>
 EOF
-
+service httpd restart
 echo "ON TO STEP 2...."
