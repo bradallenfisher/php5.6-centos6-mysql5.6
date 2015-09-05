@@ -59,5 +59,4 @@ NameVirtualHost *:8080
 </Directory>
 EOF
 
-service httpd restart
 echo "ON TO STEP 2...."
