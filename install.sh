@@ -51,11 +51,11 @@ NameVirtualHost *:8080
   ServerName local.php56.dev
 </VirtualHost>
 
-<Directory /var/www/html/nittany>
+<Directory /var/www/html>
   AllowOverride None
   Order allow,deny
   allow from all
-  Include /var/www/html/nittany/.htaccess
+  Include /var/www/html/.htaccess
 </Directory>
 EOF
 
