@@ -43,14 +43,15 @@ touch /etc/httpd/conf.d/html.conf
 
 cat << EOF > /etc/httpd/conf.d/html.conf
 
-<Directory "/var/www/html">
-  Options Indexes FollowSymLinks
-  AllowOverride All
-  Require all granted
-</Directory>
-<IfModule dir_module>
-    DirectoryIndex index.php index.html
-</IfModule>
+NameVirtualHost *:8080
+
+<VirtualHost *:8080>
+DocumentRoot /var/www/html
+ServerName local.php56.dev
+
+# Other directives here
+
+</VirtualHost>
 EOF
 
 echo "ON TO STEP 2...."
