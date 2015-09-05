@@ -28,6 +28,7 @@ yum install varnish -y
 sed -i 's/VARNISH_LISTEN_PORT=6081/VARNISH_LISTEN_PORT=80/g' /etc/sysconfig/varnish
 sed -i 's/Listen 80/Listen 8080/g' /etc/httpd/conf/httpd.conf
 
+
 service varnish start
 chkconfig varnish on
 service httpd start
@@ -39,7 +40,7 @@ ln -s /usr/local/bin/composer /usr/bin/composer
 composer global require drush/drush:7.*
 
 #make sure you can index with php and use clean urls in drupal
-touch /etc/httpd/conf.d/html.conf
+touch /etc/httpd/conf.d/domains.conf
 
 cat << EOF > /etc/httpd/conf.d/domains.conf
 
@@ -48,10 +49,9 @@ NameVirtualHost *:8080
 <VirtualHost *:8080>
 DocumentRoot /var/www/html
 ServerName local.php56.dev
-
-# Other directives here
-
+Include /var/www/html/.htaccess
 </VirtualHost>
 EOF
+
 service httpd restart
 echo "ON TO STEP 2...."
