@@ -1,5 +1,5 @@
 #/!/bin/bash
-
+yum install -y wget nano
 # install apache
 yum install httpd -y
 
